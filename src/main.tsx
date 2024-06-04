@@ -8,7 +8,7 @@ import './views/styles/common.scss'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-        <Router>
+        <Router basename='/to-do-app-zustand'>
           <App />
         </Router>
   </React.StrictMode>,
