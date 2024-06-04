@@ -1,30 +1,57 @@
-# React + TypeScript + Vite
+# To Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание
 
-Currently, two official plugins are available:
+Это простое и интуитивное приложение для управления задачами, содержащее возможности для авторизации пользователей. Каждый пользователь может видеть и управлять только своими задачами. В приложении реализованы три страницы: главная страница со списком задач, страница входа и страница разлогинивания.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Используемые технологии
 
-## Expanding the ESLint configuration
+- React;
+- Zustand - библиотека для управления состоянием;
+- TypeScript;
+- React Router.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Функциональность
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **Главная страница**: 
+  - Отображение списка задач, принадлежащих авторизованному пользователю.
+  - Возможность добавления, редактирования и удаления задач.
+  - Возможность пометить задачу как выполненную.
+  - Приветствие пользователя и кнопка для выхода.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Страница входа**: 
+  - Форма для авторизации с проверкой email и пароля.
+  - Перенаправление на главную страницу после успешного входа.
+  - Доступна только для неавторизованных пользователей.
+
+- **Страница разлогинивания**: 
+  - Перенаправляет пользователя на страницу входа.
+  - Доступна только для авторизованных пользователей.
+
+## Пользователи
+  На данный момент созданы 2 пользователя:
+
+- **Обычный пользователь**: 
+  - Логин: `user@user.com`
+  - Пароль: `12345`
+
+- **Администратор**: 
+  - Логин: `admin@admin.com`
+  - Пароль: `67890`
+
+## Установка и запуск
+
+- **Клонирование репозитория**
+
+`git clone https://github.com/Rezzeda/to-do-app-zustand.git`
+
+`cd todo-app-zustand`
+
+- **Установка зависимостей**
+
+`npm install`
+
+- **Запуск приложения в режиме раработки**
+
+`npm run dev`
