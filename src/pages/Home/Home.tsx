@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Home: React.FC = () => {
 
-    const { user, logout } = useAuthStore();
+    const { user } = useAuthStore();
     const navigate = useNavigate();
 
 
@@ -37,13 +37,7 @@ const Home: React.FC = () => {
     };
 
     const handleLogout = () => {
-        setTimeout(
-            () => {
-                logout();
-                navigate('/login');
-            },
-            1000,
-        )
+        navigate('/logout');
     };
 
     return (
