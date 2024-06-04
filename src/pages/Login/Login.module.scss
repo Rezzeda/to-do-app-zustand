@@ -1,0 +1,12 @@
+.loginPage {
+    background: white;
+    width: 80vw;
+    border-radius: 20px;
+    padding: 20px 55px;
+
+    &__title {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 0.3em;
+    }
+}
