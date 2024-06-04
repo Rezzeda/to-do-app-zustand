@@ -1,0 +1,59 @@
+.AuthForm {
+    
+    &__formGroup {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d1d1d6;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #1c1c1e;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+        padding-right: 50px;
+    }
+
+    &__input:focus {
+        border-color: #007aff;
+        outline: none;
+    }
+
+    &__label {
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        background: white;
+        padding: 5px;
+        color: #7d7d7d;
+        transition: all 0.2s;
+        pointer-events: none;
+    }
+
+    &__input:focus +&__label,
+    &__input:not(:placeholder-shown) +&__label {
+        top: -12px;
+        left: 10px;
+        font-size: 12px;
+        color: #007aff;
+    }
+
+    &__btn_submit {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #007aff, #005bb5);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        // display: none;
+        transition: background 0.3s;
+    }
+    &__btn_submit:hover {
+        background: linear-gradient(135deg, #005bb5, #003f8a);
+    }
+}

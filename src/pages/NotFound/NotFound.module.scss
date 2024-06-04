@@ -1,0 +1,36 @@
+.notFound {
+    text-align: center;
+    margin-top: 50px;
+    color: #FFFFFF;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__pedro {
+        border-radius: 50%;
+    }
+
+    &__title {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        font-size: 1.2rem;
+        color: currentColor;
+        text-decoration: none;
+
+        &:hover {
+            color: #000000;
+            text-decoration: underline;
+        }
+    }
+}
