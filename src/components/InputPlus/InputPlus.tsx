@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from "react";
-import styles from "./index.module.scss"
+import React, { useState } from "react";
+import styles from "./InputPlus.module.scss"
 
 
 interface InputPlusProps {
@@ -9,11 +9,17 @@ interface InputPlusProps {
 export const InputPlus: React.FC<InputPlusProps> = ({ onAdd, }) => {
 
     const [inputValue, setInputValue] = useState('');
+    const [error, setError] = useState('');
 
-    const addTask = useCallback(() => {
+    const addTask = () => {
+        if (inputValue.length < 3 || inputValue.length > 25) {
+            setError('Title must be between 3 and 25 characters.');
+            return;
+        }
+        setError('');
         onAdd(inputValue);
         setInputValue('');
-    }, [inputValue] )
+    };
 
     return (
         <div className={styles.formGroup}>
@@ -39,8 +45,9 @@ export const InputPlus: React.FC<InputPlusProps> = ({ onAdd, }) => {
                 onClick={addTask}
                 className={styles.formGroup__button}
                 aria-label="Add">
-                    &#x2192;
-                </button>
+                &#x2192;
+            </button>
+            {error && <p className={styles.error}>{error}</p>}
         </div>
     );
 }

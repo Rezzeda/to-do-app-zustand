@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styles from './index.module.scss';
+import styles from './ToDoTask.module.scss';
 
 interface ToDoTaskProps {
     title: string;

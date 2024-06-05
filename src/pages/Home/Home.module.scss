@@ -36,4 +36,34 @@
     &__button:hover {
         background: linear-gradient(135deg, #005bb5, #003f8a);
     }
+
+    &__section {
+        margin-top: 20px;
+    }
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &__input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d1d1d6;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #1c1c1e;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+        padding-right: 50px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+        padding: 8px;
+        margin-right: 10px;
+        flex: 1;
+    }
 }
